@@ -1,0 +1,64 @@
+
+
+<table class="table mt-3">
+  
+  <tbody>
+    <tr *ngFor="let row of employeeData">
+      <td>{{row.id}}</td>
+      <td>{{row.firstName}}</td>
+      <td>{{row.lastName}}</td>
+      <td>{{row.age}}</td>
+      <td>{{row.desgination}}</td>
+      <td>{{row.Salary}}</td>
+      <td>
+        <button (click)="deleteEmployee(row)" class="btn btn-danger mx-3">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label for="exampleInputEmail1">First Name</label>
+            <input type="text" formControlName="firstName" class="form-control" id="exampleInputEmail1"
+              aria-describedby="emailHelp">
+
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1">Last Name</label>
+            <input type="text" formControlName="lastName" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1">Age</label>
+            <input type="text" formControlName="age" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1">Desgination</label>
+            <input type="text" formControlName="desgination" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1">Salary</label>
+            <input type="text" formControlName="salary" class="form-control" id="exampleInputPassword1">
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" (click)="postEmployeeDetails()" class="btn btn-primary">Add</button>
+      </div>
+    </div>
+  </div>
+</div>

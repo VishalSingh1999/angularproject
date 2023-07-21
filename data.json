@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "id": 23,
+      "firstName": "rohit",
+      "lastName": "yadav",
+      "age": "23",
+      "desgination": "jd",
+      "salary": "25"
+    },
+    {
+      "id": 26,
+      "firstName": "mayank",
+      "lastName": "goyal",
+      "age": "20",
+      "desgination": "tester",
+      "salary": "30"
+    },
+    {
+      "id": 27,
+      "firstName": "anil",
+      "lastName": "sharma",
+      "age": "25",
+      "desgination": "manager",
+      "salary": "45"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
